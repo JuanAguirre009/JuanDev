@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "@fontsource-variable/onest";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Onest Variable", sans-serif;
 
@@ -39,13 +41,56 @@
   --color-dark-800: #1e293b;
   --color-dark-900: #0f172a;
   --color-dark-950: #020617;
+
+  --color-crusta-50: #fff3ea;
+  --color-crusta-100: #ffe4d1;
+  --color-crusta-200: #ffc7a4;
+  --color-crusta-300: #ffa06d;
+  --color-crusta-400: #ff7c3f;
+  --color-crusta-500: #ff5b1a;
+  --color-crusta-600: #ee4a08;
+  --color-crusta-700: #c43b05;
+  --color-crusta-800: #9a2f06;
+  --color-crusta-900: #7c2908;
+  --color-crusta-950: #461204;
 }
 
 body {
   background-color: var(--color-dark-950);
   color: var(--color-dark-50);
+  font-family: var(--font-sans);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes background-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-background-shine {
+    animation: background-shine 7s linear infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease forwards;
+  }
 }

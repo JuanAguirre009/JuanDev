@@ -1,0 +1,61 @@
+import {
+  SiAngular,
+  SiDocker,
+  SiDotnet,
+  SiFastapi,
+  SiFigma,
+  SiGithub,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiNpm,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+} from "react-icons/si";
+import {
+  FaAws,
+  FaCss3Alt,
+  FaDatabase,
+  FaCode,
+  FaHashtag,
+  FaMicrosoft,
+  FaRobot,
+  FaTerminal,
+} from "react-icons/fa";
+
+export const STACK = {
+  frontend: [
+    { name: "HTML", icon: SiHtml5 },
+    { name: "CSS", icon: FaCss3Alt },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "React.js", icon: SiReact },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "Figma", icon: SiFigma },
+  ],
+  backend: [
+    { name: "C#", icon: FaHashtag },
+    { name: ".NET", icon: SiDotnet },
+    { name: "Python", icon: SiPython },
+    { name: "SQL Server", icon: FaDatabase },
+    { name: "MySQL", icon: SiMysql },
+    { name: "FastAPI", icon: SiFastapi },
+  ],
+  tools: [
+    { name: "Git", icon: SiGit },
+    { name: "GitHub", icon: SiGithub },
+    { name: "Terminal", icon: FaTerminal },
+    { name: "VS Code", icon: FaCode },
+    { name: "npm", icon: SiNpm },
+    { name: "Microsoft Azure", icon: FaMicrosoft },
+    { name: "IA", icon: FaRobot },
+  ],
+  learning: [
+    { name: "Docker", icon: SiDocker },
+    { name: "AWS", icon: FaAws },
+    { name: "Angular", icon: SiAngular },
+    { name: "Next.js", icon: SiNextdotjs },
+  ],
+};
