@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "@fontsource-variable/onest";
+
+@theme {
+  --font-sans: "Onest Variable", sans-serif;
+
+  --color-primary-50: #effaff;
+  --color-primary-100: #def3ff;
+  --color-primary-200: #b6eaff;
+  --color-primary-300: #75dbff;
+  --color-primary-400: #2cc9ff;
+  --color-primary-500: #00a8e8;
+  --color-primary-600: #008fd4;
+  --color-primary-700: #0072ab;
+  --color-primary-800: #00608d;
+  --color-primary-900: #065074;
+  --color-primary-950: #04334d;
+
+  --color-daintree-50: #e9fffe;
+  --color-daintree-100: #c9fffe;
+  --color-daintree-200: #99ffff;
+  --color-daintree-300: #54fbff;
+  --color-daintree-400: #07edff;
+  --color-daintree-500: #00cfef;
+  --color-daintree-600: #00a4c9;
+  --color-daintree-700: #0082a1;
+  --color-daintree-800: #086882;
+  --color-daintree-900: #0c556d;
+  --color-daintree-950: #00171f;
+
+  --color-dark-50: #f8fafc;
+  --color-dark-100: #f1f5f9;
+  --color-dark-200: #e2e8f0;
+  --color-dark-300: #cbd5e1;
+  --color-dark-400: #94a3b8;
+  --color-dark-500: #64748b;
+  --color-dark-600: #475569;
+  --color-dark-700: #334155;
+  --color-dark-800: #1e293b;
+  --color-dark-900: #0f172a;
+  --color-dark-950: #020617;
+}
+
+body {
+  background-color: var(--color-dark-950);
+  color: var(--color-dark-50);
+}
+
+html {
+  scroll-behavior: smooth;
+}
