@@ -7,7 +7,7 @@ export const Footer = () => {
       <Container className="max-w-6xl">
         <div className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-dark-50/70 p-6 text-sm text-dark-700 shadow-lg backdrop-blur dark:border-dark-800 dark:bg-dark-900/50 dark:text-dark-200 md:flex-row md:items-center md:justify-between">
           <a href="#top" className="font-semibold hover:text-primary-500">
-            Codev Portfolio
+            JuanDev
           </a>
           <nav className="flex flex-wrap items-center gap-4">
             {NAV_ITEMS.map((item) => (

@@ -1,5 +1,5 @@
 export const PROFILE = {
-  name: "Juan Jose Aguirre Velasquez",
+  name: "Juan Jose",
   role: "Desarrollador de Software",
   greeting: "Hola, soy",
   headline: "Ingenieria de Software",

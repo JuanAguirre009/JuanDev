@@ -33,13 +33,10 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-50/80 backdrop-blur dark:border-dark-800 dark:bg-dark-950/70">
-      <nav className="container mx-auto flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a
-          href="#top"
-          className="text-2xl font-black text-primary-500 dark:text-primary-400"
-        >
-          codev
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-950/80 backdrop-blur">
+      <nav className="container mx-auto flex flex-wrap items-center justify-between px-4 py-3 sm:px-6 lg:px-8 md:grid md:max-w-6xl md:grid-cols-[auto_1fr_auto] md:items-center">
+        <a href="#top" className="text-2xl font-black text-primary-400">
+          JuanDev
         </a>
 
         <div className="flex items-center gap-3 md:order-2">
@@ -88,7 +85,7 @@ export const Navbar = () => {
         </div>
 
         <div
-          className={`w-full flex-col gap-6 pb-6 pt-4 md:order-1 md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:pb-0 md:pt-0 ${
+          className={`w-full flex-col gap-6 pb-6 pt-4 md:order-1 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:gap-8 md:pb-0 md:pt-0 ${
             isOpen ? "flex" : "hidden"
           }`}
         >
@@ -97,7 +94,7 @@ export const Navbar = () => {
               key={item.href}
               href={item.href}
               onClick={handleClose}
-              className="text-sm font-semibold uppercase tracking-[0.2em] text-dark-700 transition hover:text-primary-500 dark:text-dark-200"
+              className="text-sm font-semibold text-dark-200 transition hover:text-primary-400"
             >
               {item.label}
             </a>

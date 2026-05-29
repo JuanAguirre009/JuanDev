@@ -40,22 +40,6 @@ export const Hero = () => {
                 );
               })}
             </div>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={PROFILE.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:bg-primary-600"
-              >
-                Ver CV
-              </a>
-              <a
-                href={`mailto:${PROFILE.email}`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-dark-700 transition hover:border-primary-400 hover:text-primary-500 dark:border-dark-800 dark:text-dark-200"
-              >
-                Contacto
-              </a>
-            </div>
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="relative">

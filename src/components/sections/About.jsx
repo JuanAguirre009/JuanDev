@@ -5,7 +5,7 @@ import { SectionTitle } from "../layout/SectionTitle";
 export const About = () => {
   return (
     <section className="pt-24 motion-safe:animate-fade-up">
-      <Container id="about" className="max-w-5xl">
+      <Container id="about" className="max-w-6xl">
         <SectionTitle label="Sobre mi">{PROFILE.about.title}</SectionTitle>
         <div className="mt-10 grid gap-10 md:grid-cols-[220px_1fr] md:items-center">
           <img
