@@ -4,13 +4,13 @@ import { SectionTitle } from "../layout/SectionTitle";
 
 export const Experience = () => {
   return (
-    <section className="pt-24 motion-safe:animate-fade-up">
-      <Container id="experience" className="max-w-6xl">
+    <section className="pt-28 pb-28 motion-safe:animate-fade-up sm:pt-32 sm:pb-28">
+      <Container id="experience" className="max-w-5xl">
         <SectionTitle label="Experiencia">Trayectoria profesional</SectionTitle>
-        <div className="mt-10">
-          <ul className="relative border-l border-dark-400 dark:border-dark-700">
+        <div className="mt-12">
+          <ul className="relative border-l border-dark-200/80 dark:border-dark-800">
             {EXPERIENCE.map((item) => (
-              <li key={item.date} className="mb-8 ml-6 md:mb-6">
+              <li key={item.date} className="mb-8 ml-6 md:mb-7">
                 <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-dark-600 ring-8 ring-dark-50 dark:bg-dark-600 dark:ring-dark-950">
                   <svg
                     aria-hidden="true"
@@ -26,7 +26,7 @@ export const Experience = () => {
                     />
                   </svg>
                 </span>
-                <h3 className="mb-1 flex items-center gap-2 text-lg font-semibold text-primary-700 dark:text-primary-400">
+                <h3 className="mb-1 flex flex-wrap items-center gap-2 text-lg font-semibold text-primary-500 dark:text-primary-300 sm:text-xl">
                   {item.role}
                   <span className="font-normal text-dark-700 dark:text-dark-200">
                     -
@@ -35,10 +35,10 @@ export const Experience = () => {
                     {item.company}
                   </span>
                 </h3>
-                <time className="mb-2 block text-sm font-normal leading-none text-primary-950/80 dark:text-primary-200/90">
+                <time className="mb-3 block text-sm text-dark-500 dark:text-dark-300">
                   {item.date}
                 </time>
-                <p className="mb-4 text-base font-normal text-dark-700 dark:text-dark-200">
+                <p className="mb-4 text-[16px] font-normal leading-relaxed text-dark-600 dark:text-dark-200/90">
                   {item.description}
                 </p>
               </li>

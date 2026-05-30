@@ -7,29 +7,37 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative pt-28 lg:pt-40 motion-safe:animate-fade-up"
+      className="relative pt-28 pb-24 motion-safe:animate-fade-up sm:pt-32 sm:pb-28 lg:pt-40 lg:pb-32"
     >
-      <Container className="max-w-6xl">
+      <Container className="max-w-5xl">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-400">
-              {PROFILE.headline}
-            </p>
-            <h1 className="text-4xl font-bold text-dark-800 dark:text-dark-50 sm:text-5xl lg:text-6xl">
+            {PROFILE.headline ? (
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.4em] text-primary-400/90">
+                {PROFILE.headline}
+              </p>
+            ) : null}
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-dark-800 dark:text-dark-50 sm:text-5xl lg:text-6xl">
               {PROFILE.greeting}{" "}
               <span className="text-primary-500 dark:text-primary-400">
                 {PROFILE.name}
               </span>
             </h1>
-            <span className="inline-flex animate-background-shine bg-[linear-gradient(110deg,#64748b,45%,#0f172a,55%,#64748b)] bg-[length:250%_100%] bg-clip-text text-lg font-semibold text-transparent dark:bg-[linear-gradient(110deg,#b6eaff,45%,#065074,55%,#b6eaff)]">
+            <span className="inline-flex text-base font-semibold text-dark-600 dark:text-dark-200 sm:text-lg">
               {PROFILE.role}
             </span>
-            <div className="space-y-3 text-base text-dark-600 dark:text-dark-200">
-              {PROFILE.summary.map((line) => (
-                <p key={line}>{line}</p>
+            <div className="max-w-2xl space-y-4 text-[16px] leading-relaxed text-dark-600 dark:text-dark-200/90 sm:text-[17px] text-pretty">
+              {PROFILE.summary.map((line, index) => (
+                <p key={`${line.text}-${index}`}>
+                  {line.text}
+                  {line.highlight ? (
+                    <span className={line.accentClass}>{line.highlight}</span>
+                  ) : null}
+                  {line.suffix}
+                </p>
               ))}
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {SOCIAL_LINKS.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -47,14 +55,17 @@ export const Hero = () => {
               <img
                 src={PROFILE.avatar}
                 alt={PROFILE.name}
-                className="relative h-56 w-56 rounded-full object-cover shadow-2xl shadow-primary-900/30 sm:h-64 sm:w-64"
+                className="relative h-60 w-60 rounded-full object-cover shadow-2xl shadow-primary-900/30 ring-1 ring-white/10 dark:ring-dark-800 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
                 loading="lazy"
               />
             </div>
           </div>
         </div>
-        <div className="mt-14 hidden justify-center text-sm text-primary-500 dark:text-primary-400 md:flex">
-          <a href="#experience" className="flex items-center gap-2 animate-bounce">
+        <div className="mt-14 hidden justify-center text-sm font-medium text-primary-500 dark:text-primary-400 md:flex">
+          <a
+            href="#experience"
+            className="flex items-center gap-2 animate-bounce transition hover:text-primary-300"
+          >
             Experiencia
             <svg
               xmlns="http://www.w3.org/2000/svg"

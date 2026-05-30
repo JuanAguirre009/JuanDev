@@ -21,8 +21,8 @@ export const StackCard = ({ children, reverse = false, glow }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
-      className={`relative overflow-hidden rounded-3xl border border-white/10 p-6 shadow-2xl from-white/80 to-white/40 dark:border-dark-800 dark:from-dark-950 dark:to-black ${
-        reverse ? "bg-gradient-to-l" : "bg-gradient-to-r"
+      className={`relative overflow-hidden rounded-3xl border border-white/10 p-6 shadow-2xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(2,6,23,0.35)] from-white/85 to-white/30 dark:border-dark-800/80 dark:from-dark-950 dark:to-black/90 ${
+        reverse ? "bg-gradient-to-bl" : "bg-gradient-to-br"
       }`}
     >
       <div

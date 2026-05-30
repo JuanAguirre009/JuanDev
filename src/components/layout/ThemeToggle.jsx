@@ -40,7 +40,7 @@ export const ThemeToggle = () => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-700 transition hover:bg-dark-50 dark:border-dark-800 dark:bg-dark-900/70 dark:text-dark-100"
+      className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-500 transition hover:border-primary-400/60 hover:text-primary-300 dark:border-dark-800 dark:bg-dark-900/70 dark:text-dark-100"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}

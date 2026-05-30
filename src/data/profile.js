@@ -1,12 +1,21 @@
 export const PROFILE = {
   name: "Juan Jose",
-  role: "Desarrollador de Software",
+  role: "Desarrollador de Software ",
   greeting: "Hola, soy",
-  headline: "Ingenieria de Software",
+  headline: "",
   summary: [
-    "Transformo retos complejos en ecosistemas digitales inteligentes a traves de la ingenieria de software y la automatizacion.",
-    "Como desarrollador full stack, diseno soluciones escalables y con proposito.",
-    "Integro IA y plataformas empresariales para crear productos con impacto comercial.",
+    {
+      text: "Transformo retos complejos en ",
+      highlight: "ecosistemas digitales inteligentes",
+      suffix: " a traves de la ingenieria de software y la automatizacion.",
+      accentClass: "text-crusta-300",
+    },
+    {
+      text: "Como desarrollador full stack, diseno soluciones escalables y con proposito. ",
+      highlight: "Ademas integro IA y plataformas empresariales",
+      suffix: " para crear productos con impacto comercial.",
+      accentClass: "text-primary-300",
+    },
   ],
   avatar: "/images/profile/juan-jose.jpg",
   resumeUrl: "/docs/JuanJose__AguirreVelasquez_HV.pdf",

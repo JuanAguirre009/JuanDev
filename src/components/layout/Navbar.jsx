@@ -24,7 +24,7 @@ export const Navbar = () => {
         href={link.href}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
-        className="rounded-full border border-white/10 p-2 text-dark-700 transition hover:text-primary-500 dark:border-dark-800 dark:text-dark-200"
+        className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-500 transition hover:border-primary-400/60 hover:text-primary-300 dark:border-dark-800 dark:bg-dark-900/60 dark:text-dark-200"
         aria-label={link.label}
       >
         <Icon className="size-4" />
@@ -33,9 +33,12 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-dark-950/80 backdrop-blur">
-      <nav className="container mx-auto flex flex-wrap items-center justify-between px-4 py-3 sm:px-6 lg:px-8 md:grid md:max-w-6xl md:grid-cols-[auto_1fr_auto] md:items-center">
-        <a href="#top" className="text-2xl font-black text-primary-400">
+    <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-dark-950/70 shadow-[0_10px_30px_rgba(2,6,23,0.35)] backdrop-blur">
+      <nav className="container mx-auto flex flex-wrap items-center justify-between px-4 py-4 sm:px-6 lg:px-8 md:grid md:max-w-5xl md:grid-cols-[auto_1fr_auto] md:items-center">
+        <a
+          href="#top"
+          className="text-2xl font-black tracking-tight text-primary-400 sm:text-3xl"
+        >
           JuanDev
         </a>
 
@@ -46,7 +49,7 @@ export const Navbar = () => {
           <ThemeToggle />
           <button
             type="button"
-            className="rounded-full border border-white/10 p-2 text-dark-700 transition hover:text-primary-500 dark:border-dark-800 dark:text-dark-200 md:hidden"
+            className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-500 transition hover:border-primary-400/60 hover:text-primary-300 dark:border-dark-800 dark:bg-dark-900/60 dark:text-dark-200 md:hidden"
             onClick={handleToggle}
             aria-label="Toggle navigation"
           >
@@ -94,7 +97,7 @@ export const Navbar = () => {
               key={item.href}
               href={item.href}
               onClick={handleClose}
-              className="text-sm font-semibold text-dark-200 transition hover:text-primary-400"
+              className="text-[0.95rem] font-medium tracking-wide text-dark-200/90 transition hover:text-primary-300"
             >
               {item.label}
             </a>

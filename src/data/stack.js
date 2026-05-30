@@ -41,6 +41,8 @@ export const STACK = {
     { name: "Terminal", icon: FaTerminal, color: "#94A3B8" },
     { name: "VS Code", icon: FaCode, color: "#007ACC" },
     { name: "npm", icon: SiNpm, color: "#CB3837" },
+    { name: "Postman", image: "/images/stack/postman.png" },
+    { name: "Swagger", image: "/images/stack/swagger.png" },
     { name: "Microsoft Azure", icon: FaMicrosoft, color: "#0089D6" },
     { name: "IA", icon: FaRobot, color: "#00A8E8" },
   ],

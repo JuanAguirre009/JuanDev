@@ -3,9 +3,9 @@ import { Container } from "./Container";
 
 export const Footer = () => {
   return (
-    <footer className="mt-20 pb-10">
-      <Container className="max-w-6xl">
-        <div className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-dark-50/70 p-6 text-sm text-dark-700 shadow-lg backdrop-blur dark:border-dark-800 dark:bg-dark-900/50 dark:text-dark-200 md:flex-row md:items-center md:justify-between">
+    <footer className="mt-16 pb-12">
+      <Container className="max-w-5xl">
+        <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-dark-50/80 p-7 text-[0.95rem] text-dark-700 shadow-lg backdrop-blur dark:border-dark-800 dark:bg-dark-900/60 dark:text-dark-200 md:flex-row md:items-center md:justify-between">
           <a href="#top" className="font-semibold hover:text-primary-500">
             JuanDev
           </a>

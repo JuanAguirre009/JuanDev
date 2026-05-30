@@ -4,7 +4,7 @@ import { SectionTitle } from "../layout/SectionTitle";
 import { StackCard } from "../ui/StackCard";
 
 const renderStack = (items) => (
-  <ul className="grid grid-cols-3 gap-8 text-xs text-dark-200">
+  <ul className="grid grid-cols-2 gap-5 text-[0.8rem] text-dark-600 dark:text-dark-200 sm:grid-cols-3 sm:text-sm">
     {items.map((item) => {
       const Icon = item.icon;
       return (
@@ -22,7 +22,7 @@ const renderStack = (items) => (
               style={{ color: item.color || "currentColor" }}
             />
           ) : null}
-          <span className="text-center text-xs font-medium text-dark-200 sm:text-sm">
+          <span className="text-center text-[0.8rem] font-medium text-dark-600 dark:text-dark-200 sm:text-sm">
             {item.name}
           </span>
         </li>
@@ -33,20 +33,20 @@ const renderStack = (items) => (
 
 export const Stack = () => {
   return (
-    <section className="pt-24 motion-safe:animate-fade-up">
-      <Container id="stack" className="max-w-6xl">
+    <section className="pt-28 pb-28 motion-safe:animate-fade-up sm:pt-32 sm:pb-28">
+      <Container id="stack" className="max-w-5xl">
         <SectionTitle
           label="Tecnologias"
           titleClassName="text-4xl sm:text-5xl"
-          labelClassName="tracking-[0.4em]"
+          labelClassName="tracking-[0.22em]"
         >
           Stack principal
         </SectionTitle>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-dark-600 dark:text-dark-200">
+        <p className="mt-5 max-w-3xl text-[16px] leading-relaxed text-dark-600 dark:text-dark-200/90 sm:text-[17px] text-pretty">
           Herramientas y tecnologias que uso para construir productos digitales
           de alto impacto.
         </p>
-        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
           <StackCard glow="rgba(0, 168, 232, 0.18)">
             <h3 className="mb-8 text-2xl font-bold lg:text-3xl bg-gradient-to-t from-[#54fbff] to-[#00a4c9] dark:from-[#c9fffe] dark:to-[#00cfef] bg-clip-text text-transparent">
               Frontend
