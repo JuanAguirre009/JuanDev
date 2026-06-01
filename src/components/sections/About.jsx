@@ -9,7 +9,7 @@ export const About = () => {
         <SectionTitle label="Sobre mi">{PROFILE.about.title}</SectionTitle>
         <div className="mt-12 grid gap-12 md:grid-cols-[260px_1fr] md:items-center">
           <img
-            src={PROFILE.avatar}
+            src={PROFILE.aboutAvatar}
             alt={PROFILE.name}
             className="h-60 w-60 rounded-full object-cover shadow-xl shadow-primary-900/20 ring-1 ring-white/10 dark:ring-dark-800 sm:h-64 sm:w-64"
             loading="lazy"

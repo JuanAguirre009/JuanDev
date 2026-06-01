@@ -38,9 +38,14 @@ export const Experience = () => {
                 <time className="mb-3 block text-sm text-dark-500 dark:text-dark-300">
                   {item.date}
                 </time>
-                <p className="mb-4 text-[16px] font-normal leading-relaxed text-dark-600 dark:text-dark-200/90">
-                  {item.description}
-                </p>
+                <ul className="mb-4 space-y-3 text-[16px] font-normal leading-relaxed text-dark-600 dark:text-dark-200/90">
+                  {item.description.map((line, index) => (
+                    <li key={`${item.role}-${index}`} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400/90" />
+                      <span className="text-pretty">{line}</span>
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>
