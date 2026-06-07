@@ -39,7 +39,7 @@ export const ProjectCard = ({ project }) => {
         <h3 className="mt-3 text-[1.2rem] font-bold text-dark-800 dark:text-dark-50">
           {project.title}
         </h3>
-        <p className="mt-3 line-clamp-3 text-[0.92rem] leading-relaxed text-dark-600 dark:text-dark-200">
+        <p className="mt-3 text-[0.92rem] leading-relaxed text-dark-600 dark:text-dark-200">
           {project.excerpt}
         </p>
         <ul className="mt-auto flex flex-wrap gap-2 pt-5 text-[0.68rem] text-dark-500 dark:text-dark-200">
