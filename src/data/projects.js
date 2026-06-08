@@ -1,35 +1,42 @@
+
 export const PROJECTS = [
   {
     title: "MiSalud",
     subtitle: "Plataforma de gestión de citas médicas",
     category: "Full Stack",
     date: "2025",
+    featured: true,
     excerpt:
       "Plataforma web desarrollada con React y .NET para la gestión de citas médicas. Permite administrar consultas, usuarios y notificaciones mediante una experiencia centralizada para pacientes, médicos y administradores.",
     cover: "/images/projects/MiSalud.png",
     stack: ["C#", ".NET", "SQL Server", "React", "JavaScript"],
-    href: "#",
+    github: "https://github.com/tuusuario/misalud",
+    href: null,
   },
   {
     title: "Gestión de Requerimientos",
     subtitle: "Trazabilidad y control del ciclo de vida",
     category: "Backend",
-    date: "2024",
+    date: "2026",
+    featured: false,
     excerpt:
       "Sistema backend para administrar y dar seguimiento a requerimientos durante todo su ciclo de vida. Facilita el control de estados, prioridades, usuarios y cambios mediante procesos trazables y auditables.",
-    cover: "/images/projects/restful-api-practicas.webp",
+    cover: "/images/projects/backend.webp",
     stack: ["C#", ".NET", "SQL Server"],
-    href: "#",
+    github: null,
+    href: null,
   },
   {
-    title: "eCommerce Platform",
+    title: "eCommerce eBuy",
     subtitle: "Ventas online y gestión comercial",
     category: "Full Stack",
-    date: "2026",
+    date: "2025",
+    featured: true,
     excerpt:
       "Plataforma de comercio electrónico desarrollada para gestionar productos, inventario, pedidos y usuarios en un entorno centralizado. Incluye carrito de compras, autenticación, panel administrativo y procesos optimizados para la venta online.",
     cover: "/images/projects/Ebuy.png",
     stack: [".NET", "C#", "SQL Server", "React", "JavaScript"],
-    href: "#",
-  }
+    github: "https://github.com/samuelcuello05/eBuy",
+    href: "https://ebuyfront.netlify.app/#category-2",
+  },
 ];
