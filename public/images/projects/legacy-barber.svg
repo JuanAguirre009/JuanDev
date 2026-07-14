@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f11"/>
+      <stop offset="100%" stop-color="#1c1c20"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4a853"/>
+      <stop offset="100%" stop-color="#f5d78e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <!-- Barber pole icon -->
+  <g transform="translate(400, 170)">
+    <rect x="-22" y="-70" width="44" height="140" rx="22" fill="#1a1a1e" stroke="url(#accent)" stroke-width="3"/>
+    <clipPath id="poleClip">
+      <rect x="-22" y="-70" width="44" height="140" rx="22"/>
+    </clipPath>
+    <g clip-path="url(#poleClip)">
+      <path d="M-40 -80 L40 -40 L40 -10 L-40 -50 Z" fill="#c0392b" opacity="0.9"/>
+      <path d="M-40 -20 L40 20 L40 50 L-40 10 Z" fill="#ecf0f1" opacity="0.9"/>
+      <path d="M-40 40 L40 80 L40 110 L-40 70 Z" fill="#2980b9" opacity="0.9"/>
+    </g>
+    <rect x="-26" y="-78" width="52" height="10" rx="5" fill="url(#accent)"/>
+    <rect x="-26" y="68" width="52" height="10" rx="5" fill="url(#accent)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="700" fill="#f5f5f5" letter-spacing="1">Legacy Barber</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="345" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500" fill="#a0a0a0" letter-spacing="2">Gestión integral de barberías</text>
+
+  <!-- Status badge -->
+  <rect x="330" y="375" width="140" height="32" rx="16" fill="rgba(212, 168, 83, 0.12)" stroke="url(#accent)" stroke-width="1"/>
+  <text x="400" y="397" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#d4a853" letter-spacing="1">EN DESARROLLO</text>
+</svg>

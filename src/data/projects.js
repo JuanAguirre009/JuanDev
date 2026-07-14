@@ -1,5 +1,22 @@
 export const PROJECTS = [
   {
+    title: "Legacy Barber",
+    subtitle: "Gestión integral de barberías",
+    category: "Full Stack",
+    date: "2026",
+    featured: true,
+    excerpt:
+      "Plataforma web para la gestión integral de barberías. Permite administrar usuarios, barberos, citas y la operación del negocio mediante una experiencia moderna, segura y escalable.",
+    cover: "/images/projects/legacy-barber.svg",
+    stack: ["C#", ".NET", "PostgreSQL", "React", "JavaScript"],
+
+    githubFront: null,
+    githubBack: "https://github.com/JuanAguirre009/LegacyBarber.Api",
+
+    href: null,
+  },
+
+  {
     title: "MiSalud",
     subtitle: "Plataforma de gestión de citas médicas",
     category: "Full Stack",
