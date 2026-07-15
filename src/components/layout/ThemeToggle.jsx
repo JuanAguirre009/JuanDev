@@ -38,7 +38,7 @@ export const ThemeToggle = () => {
       type="button"
       onClick={toggleTheme}
       className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-500 transition hover:border-primary-400/60 hover:text-primary-300 dark:border-dark-800 dark:bg-dark-900/70 dark:text-dark-100"
-      aria-label="Toggle theme"
+      aria-label="Cambiar tema claro u oscuro"
     >
       {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
     </button>

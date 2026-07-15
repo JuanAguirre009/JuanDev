@@ -1,16 +1,53 @@
-# React + Vite
+# JuanDev — Portafolio de Juan José Aguirre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio personal desarrollado con React, Vite y Tailwind CSS. Muestra mi experiencia profesional, proyectos destacados y stack tecnológico como desarrollador full stack.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** — Biblioteca para construir interfaces de usuario.
+- **Vite** — Entorno de desarrollo rápido y build optimizado.
+- **Tailwind CSS 4** — Framework de utilidades para estilos.
+- **ESLint** — Análisis estático de código.
 
-## React Compiler
+## Scripts disponibles
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
 
-## Expanding the ESLint configuration
+# Generar build de producción
+npm run build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Previsualizar build de producción
+npm run preview
+
+# Ejecutar linter
+npm run lint
+```
+
+## Estructura del proyecto
+
+```
+src/
+  components/
+    layout/       # Navbar, Footer, Container, etc.
+    sections/     # Hero, Experience, Projects, About, Stack, Contact
+    ui/           # Componentes reutilizables (Pill, ProjectCard, StackCard)
+  data/           # Datos de perfil, experiencia, proyectos, stack y navegación
+  hooks/          # Hooks personalizados
+  App.jsx         # Componente principal
+  index.css       # Configuración de Tailwind y estilos base
+```
+
+## Autor
+
+**Juan José Aguirre Velásquez**
+
+- Portafolio: [https://juan-dev-six.vercel.app/](https://juan-dev-six.vercel.app/)
+- LinkedIn: [https://www.linkedin.com/in/juan-jose-aguirre-/](https://www.linkedin.com/in/juan-jose-aguirre-/)
+- GitHub: [https://github.com/JuanAguirre009](https://github.com/JuanAguirre009)
+- Email: [jaguirrevelasquez47@gmail.com](mailto:jaguirrevelasquez47@gmail.com)
+
+---
+
+© 2026 Juan José Aguirre. Todos los derechos reservados.

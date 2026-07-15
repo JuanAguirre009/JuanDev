@@ -11,7 +11,7 @@ export const Experience = () => {
   };
 
   return (
-    <section className="pt-28 pb-28 motion-safe:animate-fade-up sm:pt-32 sm:pb-28">
+    <section className="pt-28 pb-28 sm:pt-32 sm:pb-28">
       <Container id="experience" className="max-w-4xl">
         <SectionTitle label="Experiencia">Trayectoria profesional</SectionTitle>
 
@@ -19,30 +19,32 @@ export const Experience = () => {
           <div className="absolute left-6 top-4 bottom-4 hidden w-[2px] bg-gradient-to-b from-primary-500 via-daintree-400 to-transparent md:block" />
 
           {EXPERIENCE.map((item, index) => {
-            const isOpen = openIndex === index;
+            const isItemOpen = openIndex === index;
 
             return (
               <article
                 key={item.id}
-                className="relative overflow-hidden rounded-2xl border border-dark-200/60 bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] transition-all duration-300 hover:border-primary-400/30 dark:border-white/[0.08] dark:bg-dark-900/80 dark:shadow-[0_10px_40px_-20px_rgba(0,0,0,0.5)] dark:hover:border-primary-400/20"
+                className="group relative overflow-hidden rounded-2xl border border-dark-200/60 bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-400/30 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] dark:border-white/[0.08] dark:bg-dark-900/80 dark:shadow-[0_10px_40px_-20px_rgba(0,0,0,0.5)] dark:hover:border-primary-400/20 dark:hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)]"
               >
+                <div className="absolute inset-x-0 top-0 h-[2px] scale-x-0 bg-gradient-to-r from-primary-500 to-daintree-400 transition-transform duration-500 group-hover:scale-x-100" />
+
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="flex w-full items-center gap-4 p-5 text-left md:gap-6 md:pl-14"
+                  className="flex w-full items-center gap-4 p-5 text-left transition-colors duration-200 md:gap-6 md:pl-14"
                 >
-                  <span className="hidden h-3 w-3 shrink-0 rounded-full bg-primary-400 ring-4 ring-white dark:ring-dark-950 md:block" />
+                  <span className="hidden h-3 w-3 shrink-0 rounded-full bg-primary-400 ring-4 ring-white transition-transform duration-300 group-hover:scale-125 dark:ring-dark-950 md:block" />
 
                   <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <h3 className="text-lg font-bold text-dark-800 dark:text-dark-50 sm:text-xl">
+                      <h3 className="text-lg font-bold text-dark-800 transition-colors duration-200 group-hover:text-primary-600 dark:text-dark-50 dark:group-hover:text-primary-300 sm:text-xl">
                         {item.role}
                       </h3>
                       <p className="text-sm font-semibold text-primary-600 dark:text-primary-300">
                         {item.company}
                       </p>
                     </div>
-                    <span className="mt-1 shrink-0 self-start rounded-full border border-dark-200/70 bg-dark-50 px-3 py-1 text-[0.7rem] font-semibold text-dark-600 dark:border-dark-700 dark:bg-dark-800 dark:text-dark-300 sm:self-center">
+                    <span className="mt-1 shrink-0 self-start rounded-full border border-dark-200/70 bg-dark-50 px-3 py-1 text-[0.7rem] font-semibold text-dark-600 transition-colors duration-200 dark:border-dark-700 dark:bg-dark-800 dark:text-dark-300 sm:self-center">
                       {item.date}
                     </span>
                   </div>
@@ -54,7 +56,7 @@ export const Experience = () => {
                     strokeWidth="2"
                     stroke="currentColor"
                     className={`h-5 w-5 shrink-0 text-dark-400 transition-transform duration-300 dark:text-dark-500 ${
-                      isOpen ? "rotate-180" : ""
+                      isItemOpen ? "rotate-180" : ""
                     }`}
                   >
                     <path
@@ -67,7 +69,7 @@ export const Experience = () => {
 
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    isItemOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { NAV_ITEMS } from "../../data/navigation";
 import { SOCIAL_LINKS } from "../../data/socials";
+import { useActiveSection } from "../../hooks/useActiveSection";
 import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("top");
+  const activeSection = useActiveSection(NAV_ITEMS);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -16,34 +17,6 @@ export const Navbar = () => {
   const handleClose = () => {
     setIsOpen(false);
   };
-
-  useEffect(() => {
-    const sections = NAV_ITEMS.map((item) =>
-      document.querySelector(item.href)
-    ).filter(Boolean);
-    const topSection = document.querySelector("#top");
-    const allSections = topSection ? [topSection, ...sections] : sections;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting);
-        if (visible.length > 0) {
-          const mostVisible = visible.reduce((prev, current) =>
-            prev.intersectionRatio > current.intersectionRatio ? prev : current
-          );
-          setActiveSection(mostVisible.target.id);
-        }
-      },
-      {
-        rootMargin: "-40% 0px -40% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      }
-    );
-
-    allSections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -105,7 +78,7 @@ export const Navbar = () => {
             type="button"
             className="rounded-full border border-white/10 bg-dark-50/80 p-2 text-dark-500 transition hover:border-primary-400/60 hover:text-primary-300 dark:border-dark-800 dark:bg-dark-900/60 dark:text-dark-200 md:hidden"
             onClick={handleToggle}
-            aria-label="Toggle navigation"
+            aria-label="Abrir o cerrar navegación"
             aria-expanded={isOpen}
           >
             {isOpen ? (
