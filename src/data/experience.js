@@ -1,5 +1,6 @@
 export const EXPERIENCE = [
   {
+    id: "fundacion-ciudadania-influyente",
     role: "Desarrollador Full Stack (Backend .NET)",
     company: "Fundación Ciudadanía Influyente",
     date: "Junio 2025 - Julio 2026",
@@ -17,6 +18,7 @@ export const EXPERIENCE = [
     ],
   },
   {
+    id: "crystal-sas",
     role: "Practicante",
     company: "Crystal S.A.S",
     date: "Agosto 2025 - Febrero 2026",

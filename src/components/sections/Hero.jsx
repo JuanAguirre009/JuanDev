@@ -56,7 +56,10 @@ export const Hero = () => {
                 src={PROFILE.heroAvatar}
                 alt={PROFILE.name}
                 className="relative h-60 w-60 rounded-full object-cover shadow-2xl shadow-primary-900/30 ring-1 ring-white/10 dark:ring-dark-800 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
+                width="288"
+                height="288"
               />
             </div>
           </div>

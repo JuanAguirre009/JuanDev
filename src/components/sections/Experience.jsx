@@ -10,7 +10,7 @@ export const Experience = () => {
         <div className="mt-12">
           <ul className="relative border-l border-dark-200/80 dark:border-dark-800">
             {EXPERIENCE.map((item) => (
-              <li key={item.date} className="mb-8 ml-6 md:mb-7">
+              <li key={item.id} className="mb-8 ml-6 md:mb-7">
                 <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-dark-600 ring-8 ring-dark-50 dark:bg-dark-600 dark:ring-dark-950">
                   <svg
                     aria-hidden="true"

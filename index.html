@@ -1,10 +1,63 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>juandev</title>
+    <meta name="theme-color" content="#050b1d" />
+
+    <title>Juan José Aguirre | Desarrollador Full Stack</title>
+    <meta
+      name="description"
+      content="Portafolio de Juan José Aguirre, desarrollador full stack especializado en .NET, C#, React, PostgreSQL y Azure. Construyo soluciones escalables con propósito."
+    />
+    <meta
+      name="keywords"
+      content="Juan José Aguirre, desarrollador full stack, .NET, C#, React, PostgreSQL, Azure, backend, frontend, Medellín"
+    />
+    <meta name="author" content="Juan José Aguirre" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Juan José Aguirre | Desarrollador Full Stack" />
+    <meta
+      property="og:description"
+      content="Desarrollador full stack especializado en .NET, C#, React, PostgreSQL y Azure. Construyo soluciones escalables con propósito."
+    />
+    <meta property="og:image" content="https://juan-dev-six.vercel.app/images/profile/aguirrejuan.png" />
+    <meta property="og:url" content="https://juan-dev-six.vercel.app/" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Juan José Aguirre | Desarrollador Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Desarrollador full stack especializado en .NET, C#, React, PostgreSQL y Azure. Construyo soluciones escalables con propósito."
+    />
+    <meta name="twitter:image" content="https://juan-dev-six.vercel.app/images/profile/aguirrejuan.png" />
+
+    <!-- Preload critical font -->
+    <link
+      rel="preload"
+      href="/files/onest-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Theme anti-flicker script -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isDark = theme === "dark" || (!theme && prefersDark);
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

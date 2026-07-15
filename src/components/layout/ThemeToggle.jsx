@@ -5,8 +5,8 @@ const THEME_KEY = "theme";
 
 const getPreferredTheme = () => {
   if (typeof window === "undefined") return "dark";
-  const savedTheme = localStorage.getItem(THEME_KEY);
 
+  const savedTheme = localStorage.getItem(THEME_KEY);
   if (savedTheme === "light" || savedTheme === "dark") {
     return savedTheme;
   }
@@ -21,19 +21,16 @@ const applyTheme = (theme) => {
 };
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => getPreferredTheme());
 
   useEffect(() => {
-    const initialTheme = getPreferredTheme();
-    setTheme(initialTheme);
-    applyTheme(initialTheme);
-  }, []);
+    applyTheme(theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
     localStorage.setItem(THEME_KEY, nextTheme);
-    applyTheme(nextTheme);
   };
 
   return (

@@ -19,7 +19,7 @@ export const PROFILE = {
   ],
   heroAvatar: "/images/profile/aguirrejuan.png",
   aboutAvatar: "/images/profile/juanaguirre.png",
-  resumeUrl: "/docs/JuanJose_AguirreVelasquez___CV.pdf",
+  resumeUrl: "/docs/JuanJose_AguirreVelasquez__CV.pdf",
   email: "jaguirrevelasquez47@gmail.com",
   location: "Latam",
   about: {

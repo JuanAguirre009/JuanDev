@@ -1,5 +1,6 @@
 export const PROJECTS = [
   {
+    id: "legacy-barber",
     title: "Legacy Barber",
     subtitle: "Gestión integral de barberías",
     category: "Full Stack",
@@ -17,6 +18,7 @@ export const PROJECTS = [
   },
 
   {
+    id: "misalud",
     title: "MiSalud",
     subtitle: "Plataforma de gestión de citas médicas",
     category: "Full Stack",
@@ -34,6 +36,7 @@ export const PROJECTS = [
   },
 
   {
+    id: "gestion-requerimientos",
     title: "Gestión de Requerimientos",
     subtitle: "Trazabilidad y control del ciclo de vida",
     category: "Backend",
@@ -51,6 +54,7 @@ export const PROJECTS = [
   },
 
   {
+    id: "ebuy",
     title: "eCommerce eBuy",
     subtitle: "Ventas online y gestión comercial",
     category: "Full Stack",

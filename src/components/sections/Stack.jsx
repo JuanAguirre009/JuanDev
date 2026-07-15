@@ -14,6 +14,7 @@ const renderStack = (items) => (
               src={item.image}
               alt={item.name}
               className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+              style={{ color: item.imageColor || undefined }}
               loading="lazy"
             />
           ) : Icon ? (
