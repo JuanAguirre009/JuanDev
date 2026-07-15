@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@fontsource-variable/onest";
+@import "/assets/fonts/onest.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
