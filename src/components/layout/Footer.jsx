@@ -2,27 +2,35 @@ import { NAV_ITEMS } from "../../data/navigation";
 import { Container } from "./Container";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="mt-16 pb-12">
+    <footer className="pb-12 pt-16">
       <Container className="max-w-5xl">
-        <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-dark-50/80 p-7 text-[0.95rem] text-dark-700 shadow-lg backdrop-blur dark:border-dark-800 dark:bg-dark-900/60 dark:text-dark-200 md:flex-row md:items-center md:justify-between">
-          <a href="#top" className="font-semibold hover:text-primary-500">
-            JuanDev
-          </a>
-          <nav className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-col items-center justify-between gap-6 border-t border-dark-200/40 pt-8 dark:border-white/[0.08] md:flex-row">
+          <div className="flex flex-col items-center gap-2 md:items-start">
+            <a
+              href="#top"
+              className="text-xl font-black tracking-tight text-primary-400 transition hover:text-primary-300"
+            >
+              JuanDev
+            </a>
+            <p className="text-xs text-dark-500 dark:text-dark-400">
+              © {currentYear} Juan José Aguirre. Todos los derechos reservados.
+            </p>
+          </div>
+
+          <nav className="flex flex-wrap items-center justify-center gap-6">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-primary-500"
+                className="text-sm font-medium text-dark-600 transition hover:text-primary-500 dark:text-dark-200/90"
               >
                 {item.label}
               </a>
             ))}
           </nav>
-        </div>
-        <div className="mt-6 text-center text-xs text-dark-500 dark:text-dark-400">
-          Inspirado en portfolios modernos de desarrolladores.
         </div>
       </Container>
     </footer>

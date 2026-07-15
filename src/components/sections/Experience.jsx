@@ -1,54 +1,94 @@
+import { useState } from "react";
 import { EXPERIENCE } from "../../data/experience";
 import { Container } from "../layout/Container";
 import { SectionTitle } from "../layout/SectionTitle";
 
 export const Experience = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggle = (index) => {
+    setOpenIndex((prev) => (prev === index ? -1 : index));
+  };
+
   return (
     <section className="pt-28 pb-28 motion-safe:animate-fade-up sm:pt-32 sm:pb-28">
-      <Container id="experience" className="max-w-5xl">
+      <Container id="experience" className="max-w-4xl">
         <SectionTitle label="Experiencia">Trayectoria profesional</SectionTitle>
-        <div className="mt-12">
-          <ul className="relative border-l border-dark-200/80 dark:border-dark-800">
-            {EXPERIENCE.map((item) => (
-              <li key={item.id} className="mb-8 ml-6 md:mb-7">
-                <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-dark-600 ring-8 ring-dark-50 dark:bg-dark-600 dark:ring-dark-950">
+
+        <div className="relative mt-14 space-y-5">
+          <div className="absolute left-6 top-4 bottom-4 hidden w-[2px] bg-gradient-to-b from-primary-500 via-daintree-400 to-transparent md:block" />
+
+          {EXPERIENCE.map((item, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <article
+                key={item.id}
+                className="relative overflow-hidden rounded-2xl border border-dark-200/60 bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.1)] transition-all duration-300 hover:border-primary-400/30 dark:border-white/[0.08] dark:bg-dark-900/80 dark:shadow-[0_10px_40px_-20px_rgba(0,0,0,0.5)] dark:hover:border-primary-400/20"
+              >
+                <button
+                  type="button"
+                  onClick={() => toggle(index)}
+                  className="flex w-full items-center gap-4 p-5 text-left md:gap-6 md:pl-14"
+                >
+                  <span className="hidden h-3 w-3 shrink-0 rounded-full bg-primary-400 ring-4 ring-white dark:ring-dark-950 md:block" />
+
+                  <div className="flex flex-1 flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-dark-800 dark:text-dark-50 sm:text-xl">
+                        {item.role}
+                      </h3>
+                      <p className="text-sm font-semibold text-primary-600 dark:text-primary-300">
+                        {item.company}
+                      </p>
+                    </div>
+                    <span className="mt-1 shrink-0 self-start rounded-full border border-dark-200/70 bg-dark-50 px-3 py-1 text-[0.7rem] font-semibold text-dark-600 dark:border-dark-700 dark:bg-dark-800 dark:text-dark-300 sm:self-center">
+                      {item.date}
+                    </span>
+                  </div>
+
                   <svg
-                    aria-hidden="true"
-                    className="h-4 w-4 text-primary-100"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className={`h-5 w-5 shrink-0 text-dark-400 transition-transform duration-300 dark:text-dark-500 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                      clipRule="evenodd"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                     />
                   </svg>
-                </span>
-                <h3 className="mb-1 flex flex-wrap items-center gap-2 text-lg font-semibold text-primary-500 dark:text-primary-300 sm:text-xl">
-                  {item.role}
-                  <span className="font-normal text-dark-700 dark:text-dark-200">
-                    -
-                  </span>
-                  <span className="text-sm text-crusta-800 dark:text-crusta-300/90">
-                    {item.company}
-                  </span>
-                </h3>
-                <time className="mb-3 block text-sm text-dark-500 dark:text-dark-300">
-                  {item.date}
-                </time>
-                <ul className="mb-4 space-y-3 text-[16px] font-normal leading-relaxed text-dark-600 dark:text-dark-200/90">
-                  {item.description.map((line, index) => (
-                    <li key={`${item.role}-${index}`} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-400/90" />
-                      <span className="text-pretty">{line}</span>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+                </button>
+
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="border-t border-dark-200/40 px-5 pb-6 pt-4 dark:border-white/[0.06] md:px-14">
+                      <ul className="grid gap-3 text-[15px] leading-relaxed text-dark-600 dark:text-dark-200/90 sm:grid-cols-2">
+                        {item.description.map((line, lineIndex) => (
+                          <li
+                            key={`${item.id}-${lineIndex}`}
+                            className="flex gap-3"
+                          >
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-primary-400 to-daintree-400" />
+                            <span className="text-pretty">{line}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </Container>
     </section>

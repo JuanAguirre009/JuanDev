@@ -3,4 +3,5 @@ export const NAV_ITEMS = [
   { label: "Experiencia", href: "#experience" },
   { label: "Sobre mi", href: "#about" },
   { label: "Tecnologias", href: "#stack" },
+  { label: "Contacto", href: "#contact" },
 ];
