@@ -7,7 +7,6 @@ export const EXPERIENCE = [
     description: [
       "Desarrollé y mantuve aplicaciones internas orientadas a la gestión de procesos, afiliados y administración de usuarios, implementando nuevas funcionalidades tanto en backend como en frontend según las necesidades del proyecto.",
       "Optimicé soluciones desarrolladas en .NET para garantizar la estabilidad, seguridad y evolución continua de las plataformas.",
-      "Desarrollé e integré funcionalidades tanto en frontend como en backend, asegurando una comunicación eficiente entre la interfaz de usuario y los servicios del sistema.",
       "Participé en el análisis de requerimientos, diseño, desarrollo, pruebas, despliegue y mantenimiento de aplicaciones internas de la organización.",
       "Implementé nuevas funcionalidades de acuerdo con los requerimientos de las diferentes áreas de la organización, asegurando una correcta integración con los módulos existentes.",
       "Diseñé y desarrollé APIs REST para la integración entre módulos y servicios de las aplicaciones.",
