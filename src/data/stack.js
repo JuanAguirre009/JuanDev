@@ -6,6 +6,8 @@ import {
   SiGithub,
   SiGit,
   SiNpm,
+  SiPostgresql,
+  SiPostman,
   SiPython,
 } from "react-icons/si";
 import {
@@ -34,6 +36,7 @@ export const STACK = {
     { name: "Django", image: "/images/stack/django.png" },
     { name: "SQL Server", icon: FaDatabase, color: "#CC2927" },
     { name: "MySQL", image: "/images/stack/mysql.png" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
     { name: "FastAPI", icon: SiFastapi, color: "#009688" },
   ],
   tools: [
@@ -42,7 +45,7 @@ export const STACK = {
     { name: "Terminal", icon: FaTerminal, color: "#94A3B8" },
     { name: "VS Code", icon: FaCode, color: "#007ACC" },
     { name: "npm", icon: SiNpm, color: "#CB3837" },
-    { name: "Postman", image: "/images/stack/postman.png" },
+    { name: "Postman", icon: SiPostman, color: "#FF6C37" },
     { name: "Swagger", image: "/images/stack/swagger.png" },
     { name: "Azure DevOps", image: "/images/stack/azuredevop.png" },
     { name: "Microsoft Azure", icon: FaMicrosoft, color: "#0089D6" },
